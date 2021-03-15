@@ -10,9 +10,10 @@ import { LogService } from '../services/log.service.js';
 export function setupCDSGlobal() {
     if (isBrowser()) {
         initializeCDSGlobal();
-        window.CDS.environment = {production: false}
         setRunningVersion();
     }
+    window.CDS.environment = {production: false}
+
 }
 function getVersion() {
     const log = {
