@@ -11,6 +11,7 @@ import { LogService } from '../services/log.service.js';
 import { applyCSSGapShim } from '../base/css-gap.base.js';
 const addElementToRegistry = curryN(3, (tagName, elementClass, registry) => {
     if (elementExists(tagName) && !isStorybook()) {
+        window.CDS.environment = {production: false};
         LogService.warn(`${tagName} has already been registered`);
     }
     else {

@@ -15,6 +15,7 @@ export function setupCDSGlobal() {
     window.CDS.environment = {production: false}
 
 }
+
 function getVersion() {
     const log = {
         versions: window.CDS._version,
